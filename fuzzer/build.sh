@@ -17,11 +17,16 @@ build() {
    mkdir FuzzIxml_seed_corpus
 
    cp ../../../ixml/test/testdata/empty_attribute.xml FuzzIxml_seed_corpus/
+   cp ../../../ixml/test/testdata/p43pass1.xml FuzzIxml_seed_corpus/
+   cp ../../../ixml/test/testdata/xml.ascc.net/wf/zh-utf8-8.xml FuzzIxml_seed_corpus/
+   cp ../../../ixml/test/testdata/xml.ascc.net/wfns/zh-utf8-7.xml FuzzIxml_seed_corpus/
+   cp ../../../ixml/test/testdata/xmlconf/014.xml FuzzIxml_seed_corpus/
 }
 
 run() {
    DIR=build/fuzzer
-   ./$DIR/FuzzIxml $DIR/FuzzIxml_corpus/ $DIR/FuzzIxml_seed_corpus/ -detect_leaks=0
+   #./$DIR/FuzzIxml $DIR/FuzzIxml_corpus/ $DIR/FuzzIxml_seed_corpus/ -detect_leaks=0
+   ./$DIR/FuzzIxml $DIR/FuzzIxml_corpus/ $DIR/FuzzIxml_seed_corpus/
 }
 
 usage() {

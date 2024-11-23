@@ -45,7 +45,7 @@
 
 #include "upnp.h"
 
-#include "posix_overwrites.h"
+#include "posix_overwrites.h" // IWYU pragma: keep
 
 /*!
  * Mutex for protecting the global device list in a multi-threaded,

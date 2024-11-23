@@ -44,7 +44,7 @@
 #include <stdarg.h>
 #include <stdio.h>
 
-#include "posix_overwrites.h"
+#include "posix_overwrites.h" // IWYU pragma: keep
 
 #if !UPNP_HAVE_TOOLS
 	#error "Need upnptools.h to compile samples ; try ./configure --enable-tools"

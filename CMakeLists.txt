@@ -320,6 +320,7 @@ endif()
 
 if(FUZZER)
 	if(NOT CMAKE_C_COMPILER_ID STREQUAL "Clang")
+		message(WARNING "CMAKE_C_COMPILER_ID = ${CMAKE_C_COMPILER_ID}")
 		message(FATAL_ERROR "Compiling with clang is required for libFuzzer")
 	endif()
 
